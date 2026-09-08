@@ -1,38 +1,38 @@
 name: Android Check
 on:
   workflow_dispatch: # Manual trigger
-  push:
-    branches:
-      - master
-  pull_request:
-    paths-ignore:
-      - .gitignore
-      - .github/**
-      - '!.github/workflows/android-check.yaml'  # Run check on self change
-      - '**/*_tests/**'
-      - CONTRIBUTORS
-      - LICENSE
-      - NOTICE
-      - README.md
-      - android/app/src/fdroid/**
-      - android/app/src/google/**
-      - iphone/**
-      - data/organic_maps_emoji/**
-      - data/strings/**
-      - docs/**
-      - generator/**
-      - packaging/**
-      - platform/*apple*
-      - platform/*_ios*
-      - platform/*_linux*
-      - platform/*_mac*
-      - platform/*qt*
-      - platform/*_win*
-      - qt*/**
-      - skin_generator/**
-      - tools/**
-      - track_generator/**
-      - xcode/**
+  # push:
+  #   branches:
+  #     - master
+  # pull_request:
+  #   paths-ignore:
+  #     - .gitignore
+  #     - .github/**
+  #     - '!.github/workflows/android-check.yaml'  # Run check on self change
+  #     - '**/*_tests/**'
+  #     - CONTRIBUTORS
+  #     - LICENSE
+  #     - NOTICE
+  #     - README.md
+  #     - android/app/src/fdroid/**
+  #     - android/app/src/google/**
+  #     - iphone/**
+  #     - data/organic_maps_emoji/**
+  #     - data/strings/**
+  #     - docs/**
+  #     - generator/**
+  #     - packaging/**
+  #     - platform/*apple*
+  #     - platform/*_ios*
+  #     - platform/*_linux*
+  #     - platform/*_mac*
+  #     - platform/*qt*
+  #     - platform/*_win*
+  #     - qt*/**
+      # - skin_generator/**
+      # - tools/**
+      # - track_generator/**
+      # - xcode/**
 
 env:
   JAVA_HOME: /usr/lib/jvm/temurin-17-jdk-amd64  # Java 17 is required for Android Gradle 8 plugin

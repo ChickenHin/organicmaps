@@ -1,36 +1,36 @@
 name: iOS Check
 on:
   workflow_dispatch: # Manual trigger
-  push:
-    branches:
-      - master
-  pull_request:
-    paths-ignore:
-      - .gitignore
-      - .github/**
-      - '!.github/workflows/ios-check.yaml'  # Run check on self change
-      - '**/*_tests/**'
-      - '**/CMakeLists.txt'
-      - CONTRIBUTORS
-      - LICENSE
-      - NOTICE
-      - README.md
-      - android/**
-      - data/organic_maps_emoji/**
-      - data/strings/**
-      - docs/**
-      - generator/**
-      - iphone/metadata/**
-      - packaging/**
-      - platform/*_android*
-      - platform/*_linux*
-      - platform/*_mac*
-      - platform/*qt*
-      - platform/*_win*
-      - qt*/**
-      - skin_generator/**
-      - tools/**
-      - track_generator/**
+  # push:
+  #   branches:
+  #     - master
+  # pull_request:
+  #   paths-ignore:
+  #     - .gitignore
+  #     - .github/**
+  #     - '!.github/workflows/ios-check.yaml'  # Run check on self change
+  #     - '**/*_tests/**'
+  #     - '**/CMakeLists.txt'
+  #     - CONTRIBUTORS
+  #     - LICENSE
+  #     - NOTICE
+  #     - README.md
+  #     - android/**
+  #     - data/organic_maps_emoji/**
+  #     - data/strings/**
+  #     - docs/**
+  #     - generator/**
+  #     - iphone/metadata/**
+  #     - packaging/**
+  #     - platform/*_android*
+  #     - platform/*_linux*
+  #     - platform/*_mac*
+  #     - platform/*qt*
+  #     - platform/*_win*
+  #     - qt*/**
+      # - skin_generator/**
+      # - tools/**
+      # - track_generator/**
 
 jobs:
   ios-check:

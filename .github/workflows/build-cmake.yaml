@@ -2,29 +2,29 @@ name: CMake
 
 on:
   workflow_dispatch: # Manual trigger
-  push:
-    branches:
-      - master
-  pull_request:
-    paths-ignore:
-      - .gitignore
-      - .github/**
-      - '!.github/workflows/build-cmake.yaml'  # Run check on self change
-      - CONTRIBUTORS
-      - LICENSE
-      - NOTICE
-      - README.md
-      - android/**
-      - iphone/**
-      - data/countries-strings/**
-      - data/organic_maps_emoji/**
-      - data/sound-strings/**
-      - data/strings/**
-      - docs/**
-      - packaging/**
-      - tools/**
-      - '!tools/python/test_server/**'
-      - xcode/**
+  # push:
+  #   branches:
+  #     - master
+  # pull_request:
+  #   paths-ignore:
+  #     - .gitignore
+  #     - .github/**
+  #     - '!.github/workflows/build-cmake.yaml'  # Run check on self change
+  #     - CONTRIBUTORS
+  #     - LICENSE
+  #     - NOTICE
+  #     - README.md
+  #     - android/**
+  #     - iphone/**
+  #     - data/countries-strings/**
+  #     - data/organic_maps_emoji/**
+  #     - data/sound-strings/**
+  #     - data/strings/**
+  #     - docs/**
+  #     - packaging/**
+  #     - tools/**
+  #     - '!tools/python/test_server/**'
+  #     - xcode/**
 
 # Cancels previous jobs if the same branch or PR was updated again.
 # Only cancel PR runs: master runs must finish to populate the shared ccache.
@@ -42,11 +42,11 @@ jobs:
       matrix:
         cmake-build-type: [ Debug, Release ]
         environment:
-          - os: ubuntu-24.04
-            cc: clang-19
-            cxx: clang++-19
-            unity: OFF
-            run-tests: OFF
+          # - os: ubuntu-24.04
+          #   cc: clang-19
+          #   cxx: clang++-19
+          #   unity: OFF
+          #   run-tests: OFF
 
           - os: ubuntu-24.04
             cc: clang-19
